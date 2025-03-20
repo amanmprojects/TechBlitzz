@@ -18,18 +18,12 @@ def clean_response(response_text: Optional[str]) -> str:
     if not response_text:
         return ""
     
-    # Debug: Log the response text before cleaning
-    st.write(f"Debug - Response before cleaning: {response_text[:50]}...")
-    
     # Remove content between <think> and </think> tags, including the tags
     cleaned_text = re.sub(r'<think>.*?</think>', '', response_text, flags=re.DOTALL)
     
     # Additional cleaning steps
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text)  # Normalize whitespace
     cleaned_text = cleaned_text.strip()
-    
-    # Debug: Log the cleaned text
-    st.write(f"Debug - Response after cleaning: {cleaned_text[:50]}...")
     
     return cleaned_text
 

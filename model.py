@@ -25,10 +25,6 @@ def get_groq_client() -> ChatGroq:
         st.error(error_msg)
         raise ValueError(error_msg)
     
-    # Debug: Show that the API key is available (first few characters only)
-    if groq_api_key:
-        st.write(f"Debug - API key exists: {groq_api_key[:3]}...")
-    
     return ChatGroq(
         api_key=groq_api_key,
         model_name=MODEL_NAME,
