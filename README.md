@@ -13,9 +13,14 @@ A supportive, empathetic mental health assistant designed to provide guidance, r
 
 1. **Clone or download this repository**
 
+   ```sh
+   git clone https://github.com/yourusername/mental-health-assistant.git
+   cd mental-health-assistant
+   ```
+
 2. **Install dependencies**
 
-   ```
+   ```sh
    pip install -r requirements.txt
    ```
 
@@ -26,14 +31,14 @@ A supportive, empathetic mental health assistant designed to provide guidance, r
 
 4. **Set up your environment**
 
-   - Add your Groq API key to the `.env` file:
-     ```
+   - Create a `.env` file in the root directory and add your Groq API key:
+     ```env
      GROQ_API_KEY=your_groq_api_key_here
      ```
 
 5. **Run the application**
 
-   ```
+   ```sh
    streamlit run app.py
    ```
 
@@ -51,3 +56,11 @@ A supportive, empathetic mental health assistant designed to provide guidance, r
 ## Customization
 
 You can customize the assistant by modifying the system message in `app.py` to change the AI's behavior and responses.
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request. We welcome all contributions!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
