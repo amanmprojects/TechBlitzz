@@ -87,6 +87,7 @@ if user_input:
             st.session_state.messages.append(cleaned_response)
             
             # Display AI response
+            print(f"Debug - Displaying AI response: {cleaned_content}")
             display_chat_message(cleaned_content, "bot")
         else:
             st.error("Received empty response from the model")
